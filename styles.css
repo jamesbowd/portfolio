@@ -11,6 +11,8 @@
   --secondarytext: #4b5156;
 
   --linkText: #17a2b8;
+
+  --themeDotBorder: #24292e;
 }
 
 html,
@@ -106,7 +108,6 @@ h6 {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3em 30em;
   grid-template-areas:
     "nav-wrapper nav-wrapper"
     "left-column right-column";
@@ -164,6 +165,65 @@ h6 {
 
 .left-column {
   grid-area: left-column;
+}
+
+.left-column h5 {
+  text-align: center;
+  line-height: 0;
+}
+
+#profile-pic {
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border: 2px solid var(--borderColor);
+}
+
+#theme-options-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-dot {
+  background-color: black;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+  margin: 5px;
+  border: 2px solid var(--themeDotBorder);
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.theme-dot:hover {
+  border-width: 5px;
+}
+
+#light-mode {
+  background-color: #fff;
+}
+
+#blue-mode {
+  background-color: #192734;
+}
+
+#green-mode {
+  background-color: #78866b;
+}
+
+#purple-mode {
+  background-color: #7e4c74;
+}
+
+#settings-note {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
 }
 
 .right-column {
